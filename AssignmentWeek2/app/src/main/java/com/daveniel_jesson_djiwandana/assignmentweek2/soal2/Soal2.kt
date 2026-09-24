@@ -1,6 +1,8 @@
 package com.daveniel_jesson_djiwandana.assignmentweek2.soal2
 
-
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -43,6 +45,12 @@ fun Soal2View() {
     var enjoyed by remember {mutableStateOf("")}
     var spot by remember {mutableStateOf("")}
     var add by remember {mutableStateOf("")}
+    val Poppins = FontFamily(
+        Font(R.font.poppins_regular, FontWeight.Normal),
+        Font(R.font.poppins_medium, FontWeight.Medium),
+        Font(R.font.poppins_semibold, FontWeight.SemiBold),
+        Font(R.font.poppins_bold, FontWeight.Bold)
+    )
     Box (modifier = Modifier.fillMaxSize()) {
         Image(painter= painterResource(R.drawable.aurora),
             contentDescription = "backgroundImage", modifier = Modifier.fillMaxWidth().fillMaxHeight(), contentScale = ContentScale.FillHeight)
@@ -55,25 +63,26 @@ fun Soal2View() {
                         modifier = Modifier.fillMaxWidth(),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text("My Travel", color = Color.White, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth().padding(top = 25.dp), fontSize = 35.sp
+                        Text("My Travel", color = Color.White, fontFamily= Poppins,fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth().padding(top = 25.dp), fontSize = 35.sp
                         )
                     }
                     Row (modifier = Modifier.fillMaxWidth().padding(top = 10.dp)) {
-                        Text("Aurora", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 25.sp)
+                        Text("Aurora", color = Color.White, fontFamily= Poppins,fontWeight = FontWeight.Bold, fontSize = 25.sp)
                     }
                     Row (modifier = Modifier.fillMaxWidth().padding(top = 10.dp)) {
-                        Text("Tromsø, Norway", color = Color.White, fontSize = 25.sp)
+                        Text("Tromsø, Norway", color = Color.White, fontFamily= Poppins,fontSize = 25.sp)
                     }
                     Row (modifier = Modifier.fillMaxWidth().padding(top = 10.dp)) {
-                        Text("★★★★★ 5.0", color = Color(0xFFFFD166), fontSize = 25.sp)
+                        Text("★★★★★ 5.0", color = Color(0xFFFFD166), fontFamily= Poppins,fontSize = 25.sp)
                     }
                     Row (modifier = Modifier.fillMaxWidth().padding(top = 20.dp)) {
                         TextField(
                             value = enjoyed,
                             onValueChange = {enjoyed = it},
+                            textStyle = TextStyle(fontFamily = Poppins, fontSize = 15.sp),
                             placeholder = {
                                 Box (modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.CenterStart) {
-                                    Text("What did you enjoy most about your trip?", color = Color.Black, textAlign = TextAlign.Center, fontSize = 12.sp)}
+                                    Text("What did you enjoy most about your trip?", color = Color.Black, fontFamily= Poppins,textAlign = TextAlign.Center, fontSize = 12.sp)}
                                 },
                             modifier = Modifier.height(60.dp).fillMaxWidth().clip(RoundedCornerShape(10.dp)),
                             colors = TextFieldDefaults.colors(
@@ -90,9 +99,10 @@ fun Soal2View() {
                         TextField(
                             value = spot,
                             onValueChange = {spot = it},
+                            textStyle = TextStyle(fontFamily = Poppins, fontSize = 15.sp),
                             placeholder = {
                                 Box (modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.CenterStart) {
-                                    Text("What was your favorite spot?", color = Color.Black, textAlign = TextAlign.Center, fontSize = 12.sp)}
+                                    Text("What was your favorite spot?", color = Color.Black, fontFamily= Poppins,textAlign = TextAlign.Center, fontSize = 12.sp)}
                             },
                             modifier = Modifier.height(60.dp).fillMaxWidth().clip(RoundedCornerShape(10.dp)),
                             colors = TextFieldDefaults.colors(
@@ -109,9 +119,10 @@ fun Soal2View() {
                         TextField(
                             value = add,
                             onValueChange = {add = it},
+                            textStyle = TextStyle(fontFamily = Poppins, fontSize = 15.sp),
                             placeholder = {
                                 Box (modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.CenterStart) {
-                                    Text("Anything else you'd like to add?", color = Color.Black, textAlign = TextAlign.Center,  fontSize = 12.sp)}
+                                    Text("Anything else you'd like to add?", color = Color.Black, fontFamily= Poppins,textAlign = TextAlign.Center,  fontSize = 12.sp)}
                             },
                             modifier = Modifier.height(60.dp).fillMaxWidth().clip(RoundedCornerShape(10.dp)),
                             colors = TextFieldDefaults.colors(
@@ -132,7 +143,7 @@ fun Soal2View() {
                             containerColor = Color(0xFFD9ECFF),
                             contentColor = Color.Black
                         ) {
-                            Text("+", fontSize = 40.sp, textAlign = TextAlign.Center)
+                            Text("+", fontSize = 40.sp, fontFamily= Poppins,textAlign = TextAlign.Center)
                         }
                     }
                 }

@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AssignmentWeek2Theme {
-                Soal1View()
+                Soal2View()
             }
         }
     }

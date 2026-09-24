@@ -35,7 +35,7 @@ import com.daveniel_jesson_djiwandana.assignmentweek2.R
 @Composable
 fun Soal1View() {
     Column (
-        Modifier.fillMaxHeight().background(Color(0xFFFFA4A5)).padding(top = 40.dp).padding(horizontal=30.dp)
+        modifier = Modifier.fillMaxHeight().background(Color(0xFFFFA4A5)).padding(top = 40.dp).padding(horizontal=30.dp)
     ){
         Row (
         ){
