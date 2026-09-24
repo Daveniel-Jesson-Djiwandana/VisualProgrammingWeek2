@@ -1,4 +1,4 @@
-package com.daveniel_jesson_djiwandana.assignmentweek2
+package com.daveniel_jesson_djiwandana.assignmentweek2.soal1
 
 
 import androidx.compose.ui.graphics.Color
@@ -20,7 +20,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -31,11 +30,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.daveniel_jesson_djiwandana.assignmentweek2.R
 
 @Composable
 fun Soal1View() {
     Column (
-        Modifier.fillMaxHeight().background(Color(0xFFFFA4A5)).padding(top = 40.dp).padding(horizontal=50.dp)
+        Modifier.fillMaxHeight().background(Color(0xFFFFA4A5)).padding(top = 40.dp).padding(horizontal=30.dp)
     ){
         Row (
         ){
@@ -43,9 +43,9 @@ fun Soal1View() {
                 Modifier.fillMaxWidth().weight(0.5f),
                 horizontalAlignment = Alignment.Start
             ) {
-                Text("V",
+                Text("v",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 25.sp)
+                    fontSize = 25.sp, modifier = Modifier.offset(y = -2.dp))
             }
             Column (
                 Modifier.fillMaxWidth().weight(1f),
@@ -53,7 +53,7 @@ fun Soal1View() {
             ){
                 Text("Liked Songs",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 25.sp)
+                    fontSize = 20.sp)
             }
             Column (
                 Modifier.fillMaxWidth().weight(0.5f),
@@ -61,7 +61,7 @@ fun Soal1View() {
             ) {
                 Text("...",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 25.sp)
+                    fontSize = 25.sp, modifier = Modifier.offset(y = -5.dp))
             }
         }
         Row (
@@ -77,9 +77,9 @@ fun Soal1View() {
                 Modifier.weight(1f),
             ){
                 Row {
-                    Text("Television /\nSo Far So Good",
+                    Text("Television/\nSo Far So Good",
                         fontWeight = FontWeight.Bold,
-                        fontSize = 30.sp)
+                        fontSize = 25.sp)
                 }
                 Row {
                     Text("Rex Orange", fontSize = 20.sp)
@@ -100,7 +100,7 @@ fun Soal1View() {
             Text("-2:14")
         }
         Row(
-            Modifier.fillMaxWidth().padding(top = 15.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically
+            Modifier.fillMaxWidth().padding(top = 5.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically
         ) {
             Text("⏮\uFE0E", fontSize = 45.sp, color = Color.Black)
             Box (Modifier.offset(y = 7.dp)) {
